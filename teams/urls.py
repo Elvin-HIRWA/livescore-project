@@ -3,8 +3,8 @@ from . import views
 
 app_name= 'teams'
 urlpatterns=[
-    path('hirwa',views.Addteam,name='addteam'),
-    path('',views.listofteams, name='listofteams'),
-    #path('<int:cour>/yourchoice/',views.yourchoice,name='yourchoice')
+    path('',views.Addteam,name='addteam'),
+    path('all',views.listofteams, name='listofteams'),
+    path('<int:team_id>',views.teamdetail,name='teamdetail'),
 
 ]

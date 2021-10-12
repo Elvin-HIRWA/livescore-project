@@ -1,0 +1,22 @@
+{% if teamdetails.pk is 1 %}
+<h1>Team Name: {{ teamdetails.team_name }}</h1>
+<h2>Scores: {{ teamdetails.team_scores }}</h2>
+<h3>Goals: {{ teamdetails.team_goals }}</h3>
+<ul>
+    {% for i in team.set.all %}
+    <li> i.team_manager </li>
+    {% endfor %}
+</ul>
+
+{% elif teamdetails.pk is 2 %}
+<h1>Team Name: {{ teamdetails.team_name }}</h1>
+<h2>Scores:{{ teamdetails.team_scores }}</h2>
+<h3>Goals: {{ teamdetails.team_goals }}</h3>
+{% else %}
+<h1>Team Name: {{ teamdetails.team_name }}</h1>
+<h2>Scores:{{ teamdetails.team_scores }}</h2>
+<h3>Goals: {{ teamdetails.team_goals }}</h3>
+{% endif %}
+
+{% if error_message %}<p><strong>{{ error_message}}</strong></p>
+{% endif %}

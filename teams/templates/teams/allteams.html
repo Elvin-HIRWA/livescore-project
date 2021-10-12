@@ -1,0 +1,10 @@
+<ol><h1>
+    {% for i in teamlist %}
+    <li>
+        <a href="/teams/{{ i.id }}">
+            {{ i.team_name }}
+            {% endfor %}
+    </a>
+    </li>
+</h1>
+</ol>
