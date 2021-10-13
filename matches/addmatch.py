@@ -3,10 +3,11 @@ from django.forms.fields import IntegerField
 from .models import match
 
 class AddmatchForm(forms.ModelForm):
-    home_team = forms.CharField()
+    home_team = forms.SelectMultiple()
     home_team_result =IntegerField()
-    away_team = forms.IntegerField()
+    away_team = forms.SelectMultiple()
     away_team_result = forms.IntegerField()
+    
 
 
     class Meta:

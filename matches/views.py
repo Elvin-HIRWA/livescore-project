@@ -7,12 +7,13 @@ def Addmatch(request):
     if request.method == 'POST':
         add = AddmatchForm(request.POST)
         if add.is_valid():
-            team_name = add.cleaned_data['team_name']
-            team_scores = add.cleaned_data['team_scores']
-            team_goals = add.cleaned_data['team_goals']
-            
+            home_team = add.cleaned_data['home_team']
+            home_team_result = add.cleaned_data['home_team_result']
+            away_team = add.cleaned_data['away_team']
+            away_team_result = add.cleaned_data['away_team_result']
+           
             add.save()
 
     add = AddmatchForm()
-    return render(request, 'teams/addteam.html',
+    return render(request, 'matches/addmatch.html',
     {'add':add})
